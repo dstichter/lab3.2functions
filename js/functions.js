@@ -3,6 +3,14 @@ console.log(isString(testString));
 var num1 = prompt("Number 1");
 var num2 = prompt("Number 2");
 console.log(numSmaller(num1, num2));
+var s1 = "1";
+var s2 = "2";
+var s3 = "3";
+var s4 = "4";
+var s5 = "5";
+console.log(con(s1,s2,s3));
+console.log(con(s1,s2));
+console.log(con(s1,s2,s3,s4,s5));
 
 function isString(varString){
   console.log(typeof varString)
@@ -24,7 +32,9 @@ function numSmaller(varNumber1, varNumber2) {
   else
     return;
 }
-function concatenates(string1, string2, string3){
-  var finalString = string1 + " " + string2 + " " + string3
+function con(){
+var finalString = "";
+for(var i = 0; i<arguments.length; i++)
+  finalString += arguments[i];
   return finalString;
 }
